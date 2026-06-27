@@ -25,16 +25,9 @@
       <div
         class="max-w-screen-xl h-full flex flex-nowrap items-center justify-between mx-auto px-4"
       >
-        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
-            src="https://flowbite.com/images/logo.svg"
-            class="h-8"
-            alt="Flowbite Logo"
-          />
-          <span
-            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-            >Cybersoft</span
-          >
+        <a href="../index.html" class="flex items-center space-x-3 rtl:space-x-reverse text-blue-600 hover:text-blue-800 transition">
+          <i class="fa-solid fa-arrow-left text-xl"></i>
+          <span class="self-center text-2xl font-bold tracking-tight whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">Cybersoft</span>
         </a>
         <button
           data-collapse-toggle="navbar-dropdown"
@@ -565,6 +558,14 @@
                     Add new product
                   </button>
                   <button
+                    type="button"
+                    id="updateProduct"
+                    style="display: none;"
+                    class="text-white inline-flex items-center bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-yellow-900"
+                  >
+                    Update product
+                  </button>
+                  <button
                     class="text-white inline-flex items-center bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
                     data-modal-toggle="crud-modal"
                   >
@@ -586,17 +587,19 @@
             </div>
             <input
               type="text"
+              id="searchInput"
               placeholder="Tìm kiếm sản phẩm..."
               class="block w-full p-2.5 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
           </div>
 
           <select
+            id="sortSelect"
             class="text-white bg-blue-700 hover:bg-blue-800 appearance-none focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             <option value="">Sắp Xếp Theo Giá Tiền</option>
-            <option value="">Từ Lớn Đến Bé</option>
-            <option value="">Từ Bé Đến Lớn</option>
+            <option value="desc">Từ Lớn Đến Bé</option>
+            <option value="asc">Từ Bé Đến Lớn</option>
           </select>
         </div>
         <div class="overflow-x-auto">
@@ -651,12 +654,8 @@
       </ul>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js"
-      integrity="sha512-h9644v03pHqrIHThkvXhB2PJ8zf5E9IyVnrSfZg8Yj8k4RsO4zldcQc4Bi9iVLUCCsqNY0b4WXVV4UB+wbWENA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="./JS/controller/admin.js"></script>
   </body>
 </html>
